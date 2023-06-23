@@ -3,6 +3,7 @@ import Gains from "../components/Gains";
 import Layout from "../components/Layout";
 import Stock from "../components/Stock";
 import Who from "../components/Who";
+import Counter from "../components/Counter";
 import Wrapper from "../components/Wrapper";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Stock />
       <Who />
       <Gains />
+      <Counter />
     </Layout>
   );
 };
