@@ -1,4 +1,6 @@
-
+#tradingview_6bbe3{
+    height: 300px!important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
