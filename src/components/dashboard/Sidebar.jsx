@@ -6,12 +6,12 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import HelpIcon from "@mui/icons-material/Help";
 import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-    const activeLink = 'bg-[#DEF] text-[#146FF8] w-full'
-    const normalLink = ''
+  const activeLink = "bg-[#DEF] text-[#146FF8] w-full activated";
+  const normalLink = "";
   return (
     <div className="pt-[100px]">
       <div>
@@ -25,55 +25,75 @@ const Sidebar = () => {
         <p>Premium Member</p>
       </div>
       <ul className="flex flex-col items-start justify-start  text-left  h-full">
-
-       <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-       <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-            <Person2Icon /> Profile 
-          </a>
-        </li>
-       </NavLink>
-       <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <DashboardIcon />  Dashboard
-          </a>
-        </li>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <Person2Icon /> Profile
+            </a>
+          </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <CreditCardIcon/> Account
-          </a>
-        </li>
+        <NavLink
+          to="/dashboardh"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <DashboardIcon /> Dashboard
+            </a>
+          </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <AccountBalanceWalletIcon /> Funding
-          </a>
-        </li>
+        <NavLink
+          to="/dashboardh"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <CreditCardIcon /> Account
+            </a>
+          </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <HelpIcon /> Help
-          </a>
-        </li>
+        <NavLink
+          to="/dashboardh"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <AccountBalanceWalletIcon /> Funding
+            </a>
+          </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <SettingsIcon /> Settings 
-          </a>
-        </li>
+        <NavLink
+          to="/dashboardh"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <HelpIcon /> Help
+            </a>
+          </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({isActive})=>(isActive?activeLink:normalLink)}>
-        <li className="my-[1rem] px-[4rem]">
-          <a href="#" className="text-[#2173C9] font-bold">
-           <LogoutIcon /> Signout
-          </a>
-        </li>
+        <NavLink
+          to="/dashboardh"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <SettingsIcon /> Settings
+            </a>
+          </li>
+        </NavLink>
+        <NavLink
+          to="/dashboardg"
+          className={({ isActive }) => (isActive ? activeLink : normalLink)}
+        >
+          <li className="my-[1rem] px-[4rem]">
+            <a href="#" className="text-[#2173C9] font-bold">
+              <LogoutIcon /> Signout
+            </a>
+          </li>
         </NavLink>
       </ul>
     </div>
