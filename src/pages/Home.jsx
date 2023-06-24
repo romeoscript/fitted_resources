@@ -5,6 +5,7 @@ import Stock from "../components/Stock";
 import Who from "../components/Who";
 import Counter from "../components/Counter";
 import Wrapper from "../components/Wrapper";
+import TestimonialSlider from "../components/TestimonialSlider";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Who />
       <Gains />
       <Counter />
+      <TestimonialSlider />
     </Layout>
   );
 };

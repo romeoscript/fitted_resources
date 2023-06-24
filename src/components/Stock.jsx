@@ -7,8 +7,10 @@ import adrs from "../assets/adrs.png";
 import buy from "../assets/buy.png";
 import ira from "../assets/ira.png";
 import human from "../assets/human.png";
+import { useLocation } from "react-router-dom";
 
 const Stock = () => {
+  const location = useLocation();
   const mainStock = [
     {
       title: "Stocks",
@@ -52,32 +54,37 @@ const Stock = () => {
           );
         })}
       </div>
-      <div className="flex items-center justify-center gap-8 my-[4rem] w-4/5 m-auto">
-        <aside>
-          <img src={buy} alt="" />
-        </aside>
-        <aside className="text-left ">
-          <div className="mb-[1rem]">
-            <h2 className="flex items-center justify-start gap-2 text-2xl ">
-              {" "}
-              <img src={ira} alt="" /> IRA
-            </h2>
-            <p className="px-[3rem]">
-              Save for retirement with POTUS Traditional, Roth or Rollover IRA.
-            </p>
-          </div>
-          <div>
-            <h2 className="flex items-center justify-start gap-2 text-2xl">
-              {" "}
-              <img src={human} alt="" /> Individual Brokerage Account
-            </h2>
-            <p className="px-[3rem]">
-              Individual brokerage account is the general account which allows
-              you to buy and sell securities and assets.
-            </p>
-          </div>
-        </aside>
-      </div>
+      {location.pathname === "/about" ? (
+        ""
+      ) : (
+        <div className="flex items-center justify-center gap-8 my-[4rem] w-4/5 m-auto">
+          <aside>
+            <img src={buy} alt="" />
+          </aside>
+          <aside className="text-left ">
+            <div className="mb-[1rem]">
+              <h2 className="flex items-center justify-start gap-2 text-2xl ">
+                {" "}
+                <img src={ira} alt="" /> IRA
+              </h2>
+              <p className="px-[3rem]">
+                Save for retirement with POTUS Traditional, Roth or Rollover
+                IRA.
+              </p>
+            </div>
+            <div>
+              <h2 className="flex items-center justify-start gap-2 text-2xl">
+                {" "}
+                <img src={human} alt="" /> Individual Brokerage Account
+              </h2>
+              <p className="px-[3rem]">
+                Individual brokerage account is the general account which allows
+                you to buy and sell securities and assets.
+              </p>
+            </div>
+          </aside>
+        </div>
+      )}
     </>
   );
 };
