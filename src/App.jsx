@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Accounts from "./components/dashboard/pages/Accounts";
+import Funding from "./components/dashboard/pages/Funding";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboards/account" element={<Accounts />} />
+        <Route path="/dashboards/funding" element={<Funding />} />
       </Routes>
     </>
   );
