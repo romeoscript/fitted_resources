@@ -44,7 +44,7 @@ const Balance = () => {
           </figure>
         </div>
       </aside>
-      <aside
+      {/* <aside
         className="basis-[47%] h-[288px] rounded-md  flex justify-between"
         style={{
           boxShadow: " 0px 4px 20px -1px rgba(0, 0, 0, 0.25)",
@@ -57,6 +57,30 @@ const Balance = () => {
         <div className="basis-[70%] w-[70%] overflow-hidden">
           <PositionTable />
           <button className="rounded-md bg-[#2173C9] w-4/5 p-[0.5rem] block m-[1rem] text-white font-bold">See All Positions</button>
+        </div>
+      </aside> */}
+      <aside
+        className="basis-[47%] h-[288px] rounded-md p-[1rem] grid grid-cols-2 gap-4"
+        style={{
+          boxShadow: " 0px 4px 20px -1px rgba(0, 0, 0, 0.25)",
+          width: "50%",
+        }}
+      >
+        <div className="h-[123px] rounded-[20px] bg-[#D0FEFF] mb-[0.5rem] flex items-center justify-center flex-col text-[#2173C9]" style={{boxShadow:'0px 4px 20px -1px rgba(0, 0, 0, 0.25)'}}>
+          <h2 className="text-3xl font-bold">59%</h2>
+          <p>Trade success</p>
+        </div>
+        <div className="h-[123px] rounded-[20px]  mb-[0.5rem] flex items-center justify-center flex-col text-[#2173C9]" style={{boxShadow:'0px 4px 20px -1px rgba(0, 0, 0, 0.25)', background:'rgba(40, 150, 214, 0.15)'}}>
+          <h2 className="text-3xl font-bold">590%</h2>
+          <p>Account ROI</p>
+        </div>
+        <div className="h-[113px] rounded-[20px] bg-[#FFE6A6] mb-[0.5rem] flex items-center justify-center flex-col text-[#2173C9]" style={{boxShadow:'0px 4px 20px -1px rgba(0, 0, 0, 0.25)'}}>
+          <h2 className="text-3xl font-bold">$5988</h2>
+          <p>This Month</p>
+        </div>
+        <div className="h-[113px] rounded-[20px] bg-[#5D9BF5] mb-[0.5rem] flex items-center justify-center flex-col text-[#2173C9]" style={{boxShadow:'0px 4px 20px -1px rgba(0, 0, 0, 0.25)'}}>
+          <h2 className="text-3xl font-bold">56</h2>
+          <p>Total Trade </p>
         </div>
       </aside>
     </div>

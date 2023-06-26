@@ -26,7 +26,7 @@ const Sidebar = () => {
       </div>
       <ul className="flex flex-col items-start justify-start  text-left  h-full">
         <NavLink
-          to="/dashboard"
+          to="/dashboardx"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <li className="my-[1rem] px-[4rem]">
@@ -36,7 +36,7 @@ const Sidebar = () => {
           </li>
         </NavLink>
         <NavLink
-          to="/dashboardh"
+          to="/dashboard"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <li className="my-[1rem] px-[4rem]">
@@ -46,7 +46,7 @@ const Sidebar = () => {
           </li>
         </NavLink>
         <NavLink
-          to="/dashboardh"
+          to="/dashboards/account"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <li className="my-[1rem] px-[4rem]">
