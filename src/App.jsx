@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Accounts from "./components/dashboard/pages/Accounts";
 import Funding from "./components/dashboard/pages/Funding";
 import Help from "./components/dashboard/pages/Help";
+import Settings from "./components/dashboard/pages/Settings";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/dashboards/account" element={<Accounts />} />
         <Route path="/dashboards/funding" element={<Funding />} />
         <Route path="/dashboards/help" element={<Help />} />
+        <Route path="/dashboards/settings" element={<Settings />} />
       </Routes>
     </>
   );

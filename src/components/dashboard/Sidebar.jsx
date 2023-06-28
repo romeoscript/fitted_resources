@@ -76,7 +76,7 @@ const Sidebar = () => {
           </li>
         </NavLink>
         <NavLink
-          to="/dashboardh"
+          to="/dashboards/settings"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <li className="my-[1rem] px-[4rem]">
