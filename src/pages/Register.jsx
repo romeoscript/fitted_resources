@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 
 export default function Reigster() {
@@ -11,7 +12,7 @@ export default function Reigster() {
             Register
           </h1>
           <form className="mt-6">
-          <figure className="flex gap-4">
+            <figure className="flex gap-4">
               <div className="mb-2 w-full">
                 <label
                   for="name"
@@ -125,9 +126,11 @@ export default function Reigster() {
           <p className="mt-8 text-xs font-light text-center text-gray-700">
             {" "}
             Don't have an account?{" "}
-            <a href="#" className="font-medium text-[#2173C9] hover:underline">
-              Sign in
-            </a>
+            {/* <Link to='/login'>
+              <span className="font-medium text-[#2173C9] hover:underline">
+                Sign in
+              </span>
+            </Link> */}
           </p>
         </div>
       </div>
