@@ -26,7 +26,7 @@ const Sidebar = () => {
       </div>
       <ul className="flex flex-col items-start justify-start  text-left  h-full">
         <NavLink
-          to="/dashboardx"
+          to="/dashboards/profile"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           <li className="my-[1rem] px-[4rem]">
