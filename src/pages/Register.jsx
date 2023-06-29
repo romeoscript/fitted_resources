@@ -126,11 +126,11 @@ export default function Reigster() {
           <p className="mt-8 text-xs font-light text-center text-gray-700">
             {" "}
             Don't have an account?{" "}
-            {/* <Link to='/login'>
+            <Link to='/login'>
               <span className="font-medium text-[#2173C9] hover:underline">
                 Sign in
               </span>
-            </Link> */}
+            </Link>
           </p>
         </div>
       </div>
