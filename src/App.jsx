@@ -7,6 +7,7 @@ import Funding from "./components/dashboard/pages/Funding";
 import Help from "./components/dashboard/pages/Help";
 import Settings from "./components/dashboard/pages/Settings";
 import Profile from "./components/dashboard/pages/Profile";
+import Success from "./components/dashboard/pages/Success";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/dashboards/funding" element={<Funding />} />
         <Route path="/dashboards/help" element={<Help />} />
         <Route path="/dashboards/settings" element={<Settings />} />
+        <Route path="/success" element={<Success />} />
         <Route path="/dashboards/profile" element={<Profile />} />
       </Routes>
     </>

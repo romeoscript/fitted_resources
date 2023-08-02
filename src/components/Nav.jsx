@@ -6,20 +6,20 @@ import profile1 from '../assets/profile1.png'
 import ClearIcon from "@mui/icons-material/Clear";
 
 
-const Nav = ({change,mobile}) => {
+const Nav = ({ change, mobile }) => {
 
-  
+
 
   return (
-    <div className=" flex items-center justify-between left-0 h-[90px] bg-[white] z-[30] px-[1rem] pl-[425px] fixed top-0 w-full z-20 ">
+    <div className=" flex items-center justify-between left-0 h-[90px] bg-[white] z-[30] px-[1rem] lg:pl-[425px] fixed top-0 w-full z-20 ">
 
       <aside className="flex items-center justify-center gap-8">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" onClick={() => { window.history.back() }}>
           <path d="M12.5757 19.895L11.4917 20.979C11.0327 21.438 10.2905 21.438 9.83643 20.979L0.344238 11.4917C-0.114746 11.0327 -0.114746 10.2905 0.344238 9.83643L9.83643 0.344238C10.2954 -0.114746 11.0376 -0.114746 11.4917 0.344238L12.5757 1.42822C13.0395 1.89209 13.0298 2.64893 12.5562 3.10303L6.67236 8.7085H20.7056C21.355 8.7085 21.8774 9.23096 21.8774 9.88037V11.4429C21.8774 12.0923 21.355 12.6147 20.7056 12.6147H6.67236L12.5562 18.2202C13.0347 18.6743 13.0444 19.4312 12.5757 19.895Z" fill="#828282" />
         </svg>
         <p>My profile</p>
       </aside>
-      <aside className=" items-center gap-4 px-[0.5rem] md:flex hidden">
+      <aside className=" items-center gap-4 px-[0.5rem] lg:flex hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <path d="M24 10.0512C24 10.5559 23.6026 10.9649 23.1124 10.9649C22.6222 10.9649 22.2249 10.5559 22.2249 10.0512C22.2249 7.51759 21.4084 5.47728 20.0441 4.07264C18.6797 2.66801 16.6978 1.82749 14.2368 1.82749C13.7466 1.82749 13.3493 1.41841 13.3493 0.913744C13.3493 0.409077 13.7466 0 14.2368 0C17.1012 0 19.5572 0.986971 21.2992 2.78044C23.0413 4.57391 24 7.10232 24 10.0512Z" fill="#78849E" />
           <path d="M19.5622 10.9649C20.0524 10.9649 20.4498 10.5559 20.4498 10.0512C20.4498 6.34841 17.8335 3.65498 14.2368 3.65498C13.7466 3.65498 13.3493 4.06405 13.3493 4.56872C13.3493 5.07339 13.7466 5.48247 14.2368 5.48247C16.8531 5.48247 18.6746 7.35775 18.6746 10.0512C18.6746 10.5559 19.072 10.9649 19.5622 10.9649Z" fill="#78849E" />
@@ -29,9 +29,9 @@ const Nav = ({change,mobile}) => {
         <img src={profile1} alt="" className="h-[56px] w-[56px] rounded-full" />
 
       </aside>
-      {mobile? <ClearIcon onClick={change} className='text-3xl cursor-pointer md:hidden block'/> :<BiMenuAltRight onClick={change} className='text-3xl cursor-pointer md:hidden block'/> }
-    
-    
+      {mobile ? <ClearIcon onClick={change} className='text-3xl cursor-pointer lg:hidden block' /> : <BiMenuAltRight onClick={change} className='text-3xl cursor-pointer lg:hidden block' />}
+
+
     </div>
   );
 };

@@ -8,6 +8,7 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import { Button } from '@mui/material';
 import useFetch from '../useFetch';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const BankDetailsForm = () => {
     const { data } = useFetch('https://fitted-portal-api.herokuapp.com/api/v1/bank/banks');
@@ -16,6 +17,7 @@ const BankDetailsForm = () => {
     const [bankCode, setBankCode] = useState('');
     const [accountNo, setAccountNo] = useState('');
     const [name, setName] = useState('')
+    const navigate = useNavigate()
   
     useEffect(() => {
       if (accountNo.length === 10) {
@@ -36,16 +38,17 @@ const BankDetailsForm = () => {
     const isFormFilled = bankCode && accountNo && name?.account_name;
     const handleSubmit = (event) => {
       event.preventDefault(); // prevent form from refreshing the page
-  
+
+      console.log('fuck');
       // make POST request
-      axios.post('https://fitted-portal-api.herokuapp.com/api/v1/bank/submitBankDetails', {
+      axios.post('https://fitted-portal-api.herokuapp.com/api/v1/bank/resolveAccount', {
         accountNo,
         bankCode,
         accountName: name?.account_name
       })
       .then(response => {
-        console.log(response.data);
-        // handle response, maybe clear the form or show a success message
+        console.log(response.data.success);
+       if(response.data.success) navigate('/success')
       })
       .catch(error => {
         console.log(error);
@@ -54,7 +57,7 @@ const BankDetailsForm = () => {
     };
 
   return (
-    <div>
+    <div className='lg:shadow-none shadow-md lg:p-0 p-[1rem] rounded-[32px] bg-white'>
       <form onSubmit={handleSubmit}>
         <p className='text-left mb-[1rem]'>One step closer to the goal! please provide us with your Bank details with which you will be recieving payment.</p>
         <div>
@@ -123,7 +126,7 @@ const BankDetailsForm = () => {
         </div>
 
         <div className='mt-[1rem] text-left'>
-          <Button sx={{ background: 'pink' }} disabled={!isFormFilled} variant="contained">Submit Application</Button>
+          <Button sx={{ background: 'pink' }} type='submit' disabled={!isFormFilled} variant="contained">Submit Application</Button>
         </div>
       </form>
     </div>

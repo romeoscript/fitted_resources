@@ -4,12 +4,13 @@ import profile_g from "../../../assets/profile_g.png";
 import Layout from "../Layout";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import Profile from "./Profile";
 
 const Accounts = () => {
   return (
     <div>
       <Layout>
-        <div className=" mx-auto bg-white my-[4rem] w-[90%] m-auto rounded-[25px] h-[100px] relative" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}>
+        <div className="lg:block hidden mx-auto bg-white my-[4rem] w-[90%] m-auto rounded-[25px] h-[100px] relative" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}>
           <span className="block p-[0.5rem] bg-white rounded-[31px] absolute bottom-[20%] left-[2%]" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}><img src={profile_g} alt="" className="h-[112px] w-[112px] rounded-[31px] " /></span>
           <div className="flex gap-8 items-center h-full pl-[11rem]">
             <aside >
@@ -50,10 +51,12 @@ const Accounts = () => {
 
         </div>
 
-
+       <div className="lg:hidden block my-[1.5rem]">
+       <Profile />
+       </div>
 
         <div
-          className="p-[1rem] h-[499px]  rounded-[20px] bg-white"
+          className="p-[1rem] m-[1.5rem] h-[499px]  rounded-[20px] bg-white"
           style={{ boxShadow: "0px 4px 20px -1px rgba(0, 0, 0, 0.25)" }}
         >
           <h2 className="text-center font-bold text-3xl text-[#2173C9] mb-[2rem]">Accounts History</h2>

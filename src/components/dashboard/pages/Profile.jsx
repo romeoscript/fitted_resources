@@ -3,7 +3,7 @@ import profile_g from "../../../assets/profile_g.png";
 
 const Profile = () => {
   return (
-    <aside className="mx-[1rem]">
+    <aside className="mx-[1rem] lg:shadow-none shadow-md lg:p-0 p-[1rem] rounded-[32px] bg-white">
       <img src={profile_g} alt="" />
       <div className="text-left flex gap-4 mt-[3rem]">
         <figure className="text-[#828282]">

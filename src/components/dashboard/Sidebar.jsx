@@ -26,9 +26,9 @@ const Sidebar = () => {
           />
           <img src={edit} className='w-[32px] h-[32px]' alt="" />
         </div>
-        <h2 className="font-[700] text-[24px] text">Sikiru Agbaje </h2>
+        <h2 className="font-[700] text-[24px] text-center">Sikiru Agbaje </h2>
         <p className="flex items-center justify-center gap-2 my-[0.5rem]">www.tailors.fitted.ng/sikiru <img src={component1} alt="" /></p>
-        <p className="text-[14px] font-[300]">Get measurements from any customer via this link</p>
+        <p className="text-[12px] font-[300] text-center">Get measurements from any customer via this link</p>
       </div>
       <ul className="flex flex-col items-start justify-start text-white  text-left  h-full">
         <NavLink
