@@ -1,21 +1,30 @@
 import React from "react";
-import Deposit_Withdraw from "../Deposit_Withdraw";
 import Layout from "../Layout";
-import TransactionHistory from "../TransactionHistory";
+import BankForms from "../../BankForms";
+import Profile from "./Profile";
 
 const Funding = () => {
+
+
   return (
     <div>
       <Layout>
-        <Deposit_Withdraw />
+
         <div
-          className="p-[1rem] h-[499px]  rounded-[20px] bg-white"
-          style={{ boxShadow: "0px 4px 20px -1px rgba(0, 0, 0, 0.25)" }}
+          className="p-[1rem] min-h-[599px]  rounded-[20px] bg-white rounded-[24px] w-[90%] m-auto my-[2rem]"
+          style={{ boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.07)' }}
         >
-          <h2 className="text-center font-bold text-3xl text-[#2173C9] mb-[2rem]">
-            Transaction History
-          </h2>
-          <TransactionHistory />
+          <h2 className="font-bold text-2xl">Vetted Tailor Application</h2>
+          <p className="w-3/5 text-[#4F4F4F] m-auto my-[0.5rem]">One step closer to the goal! please provide us with your Bank details with which you will be recieving payment.</p>
+
+          <main className="flex justify-between">
+            <Profile />
+            <aside className="basis-[50%] p-[1rem]">
+
+              <BankForms />
+
+            </aside>
+          </main>
         </div>
       </Layout>
     </div>

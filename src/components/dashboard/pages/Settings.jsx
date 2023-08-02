@@ -1,21 +1,34 @@
-import React from 'react'
-import Layout from '../Layout'
+import React from "react";
+import Layout from "../Layout";
+import profile_g from "../../../assets/profile_g.png";
+import BankForms from "../../BankForms";
+import Profile from "./Profile";
+import BankDEtailsForm from "../../BankDetailForm";
 
 const Settings = () => {
+
+
   return (
     <div>
-        <Layout>
-            <section className='p-[2rem] grid gap-5'>
-                <aside className='h-[314px] rounded-[20px] bg-white' style={{boxShadow:' 0px 4px 20px -1px rgba(0, 0, 0, 0.25)'}}>
-                    <h1>Settings</h1>
-                </aside>
-                <aside className='h-[314px] rounded-[20px] bg-white' style={{boxShadow:' 0px 4px 20px -1px rgba(0, 0, 0, 0.25)'}}>
-                    <h1>Settings</h1>
-                </aside>
-            </section>
-        </Layout>
-    </div>
-  )
-}
+      <Layout>
 
-export default Settings
+        <div
+          className="p-[1rem] min-h-[599px]  rounded-[20px] bg-white rounded-[24px] w-[90%] m-auto my-[2rem]"
+          style={{ boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.07)' }}
+        >
+          <h2 className="font-bold text-2xl">Vetted Tailor Application</h2>
+          <main className="flex justify-between">
+            <Profile />
+            <aside className="basis-[50%] p-[1rem]">
+
+              <BankDEtailsForm />
+
+            </aside>
+          </main>
+        </div>
+      </Layout>
+    </div>
+  );
+};
+
+export default Settings;

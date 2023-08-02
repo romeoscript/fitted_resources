@@ -1,226 +1,37 @@
 import potus from "../assets/potus.png";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiMenuAltRight } from "react-icons/bi";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+
+import profile1 from '../assets/profile1.png'
 import ClearIcon from "@mui/icons-material/Clear";
-import { Link } from "react-router-dom";
 
-const Nav = () => {
-  const [dropdown, setDropdown] = useState(false);
-  const [about, setAbout] = useState(false);
-  const [service, setService] = useState(false);
-  const [mobile, setMobile] = useState(false);
 
-  const changeMobile = () => {
-    setMobile(!mobile);
-  };
+const Nav = ({change,mobile}) => {
+
+  
 
   return (
-    <div className="flex md:justify-around justify-between left-0 h-[90px] bg-[white] z-[30] items-center px-[1rem] fixed top-0 w-full z-20">
-      <aside className="w-[200px]">
-        <Link to="/">
-          <img src={potus} alt="" className="w-full" />
-        </Link>
+    <div className=" flex items-center justify-between left-0 h-[90px] bg-[white] z-[30] px-[1rem] pl-[425px] fixed top-0 w-full z-20 ">
+
+      <aside className="flex items-center justify-center gap-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M12.5757 19.895L11.4917 20.979C11.0327 21.438 10.2905 21.438 9.83643 20.979L0.344238 11.4917C-0.114746 11.0327 -0.114746 10.2905 0.344238 9.83643L9.83643 0.344238C10.2954 -0.114746 11.0376 -0.114746 11.4917 0.344238L12.5757 1.42822C13.0395 1.89209 13.0298 2.64893 12.5562 3.10303L6.67236 8.7085H20.7056C21.355 8.7085 21.8774 9.23096 21.8774 9.88037V11.4429C21.8774 12.0923 21.355 12.6147 20.7056 12.6147H6.67236L12.5562 18.2202C13.0347 18.6743 13.0444 19.4312 12.5757 19.895Z" fill="#828282" />
+        </svg>
+        <p>My profile</p>
       </aside>
-      <aside className="flex items-center">
-        <ul className="md:flex items-center mr-3  hidden">
-        <li className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative">
-            <Link to="/contact"> Market</Link>
-          </li>
-          <li
-            className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative"
-            onMouseOver={() => setDropdown(true)}
-            onMouseLeave={() => setDropdown(false)}
-          >
-            Financial service <BiChevronDown />
-            {dropdown && (
-              <div
-                className="text-[14px] absolute bg-[blue] text-[blue] p-[1rem] left-[-100px] top-[90%] min-w-[300px] max-w-[472px] rounded-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, type: "spring" }}
-              >
-                <ul className="grid grid-cols-3 mb-[1rem]">
-                 
-                </ul>
-              </div>
-            )}
-          </li>
-          <li
-            className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative"
-            onMouseOver={() => setAbout(true)}
-            onMouseLeave={() => setAbout(false)}
-          >
-            About us <BiChevronDown />
-            {about && (
-              <div
-                className="text-[14px] absolute bg-[blue] text-[blue] p-[1rem] text-center top-[90%] w-[152px] rounded-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, type: "spring" }}
-              >
-                <ul className=" mb-[1rem] ">
-                  <li className="border-b-2 p-[0.5rem]">Who We Are </li>
-                  <li className="border-b-2 p-[0.5rem]">Gallery</li>
-                  <li className="border-b-2 p-[0.5rem]"> Portfolio</li>
-                  <li className="border-b-2 p-[0.5rem]"> Team</li>
-                  <li className="border-b-2 p-[0.5rem]"> Mission</li>
-                  <li className="border-b-2 p-[0.5rem]"> vision</li>
-                </ul>
-              </div>
-            )}
-          </li>
-         
-          <li className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative">
-            <Link to="/contact"> Contact us</Link>
-          </li>
-          <li className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative">
-            <Link to="/contact"> Get Started </Link>
-          </li>
-        </ul>
-        {!mobile && (
-          <MenuIcon
-            className="text-[blue] mx-[1rem] md:hidden block"
-            style={{ fontSize: "35px" }}
-            onClick={changeMobile}
-          />
-        )}
-        {mobile && (
-          <ClearIcon
-            className="text-[blue] mx-[1rem]"
-            style={{ fontSize: "35px" }}
-            onClick={changeMobile}
-          />
-        )}
-        {mobile && (
-          <ul className="mr-3 absolute bg-[blue] rounded-md p-[1rem] top-20 right-8 md:hidden">
-            <li
-              className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative"
-              onMouseOver={() => setDropdown(true)}
-              onMouseLeave={() => setDropdown(false)}
-            >
-              Courses <BiChevronDown />
-              {dropdown && (
-                <div
-                  className="text-[14px] absolute bg-[blue] right-[2%] text-[blue] p-[1rem] z-20 top-[90%] min-w-[300px] rounded-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1.5, type: "spring" }}
-                >
-                  <ul className="grid  mb-[1rem]">
-                    <li>Django</li>
-                    <li>Dart</li>
-                    <li>web Design</li>
+      <aside className=" items-center gap-4 px-[0.5rem] md:flex hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M24 10.0512C24 10.5559 23.6026 10.9649 23.1124 10.9649C22.6222 10.9649 22.2249 10.5559 22.2249 10.0512C22.2249 7.51759 21.4084 5.47728 20.0441 4.07264C18.6797 2.66801 16.6978 1.82749 14.2368 1.82749C13.7466 1.82749 13.3493 1.41841 13.3493 0.913744C13.3493 0.409077 13.7466 0 14.2368 0C17.1012 0 19.5572 0.986971 21.2992 2.78044C23.0413 4.57391 24 7.10232 24 10.0512Z" fill="#78849E" />
+          <path d="M19.5622 10.9649C20.0524 10.9649 20.4498 10.5559 20.4498 10.0512C20.4498 6.34841 17.8335 3.65498 14.2368 3.65498C13.7466 3.65498 13.3493 4.06405 13.3493 4.56872C13.3493 5.07339 13.7466 5.48247 14.2368 5.48247C16.8531 5.48247 18.6746 7.35775 18.6746 10.0512C18.6746 10.5559 19.072 10.9649 19.5622 10.9649Z" fill="#78849E" />
+          <path d="M6.83839 21.7893C6.53578 22.1863 6.60296 22.7607 6.98855 23.0723C9.19939 24.8589 12.4572 23.9602 13.5042 21.275C13.6868 20.8066 13.466 20.2745 13.0111 20.0866C12.5562 19.8986 12.0394 20.1259 11.8568 20.5942C11.2507 22.1488 9.36456 22.6691 8.08463 21.6348C7.69903 21.3232 7.1411 21.3924 6.83839 21.7893Z" fill="#78849E" />
+          <path d="M6.35907 3.80801C6.35582 3.79262 6.35225 3.77728 6.34824 3.76189C6.22136 3.2744 5.73468 2.98517 5.26121 3.11579C4.78774 3.24635 4.5067 3.74739 4.63357 4.23488C4.63758 4.25027 4.64202 4.26544 4.64668 4.28044C1.88757 5.49803 0.051774 9.56587 1.44227 13.1559C1.95799 14.2296 1.42039 15.0221 0.860894 15.8469C0.332279 16.6264 -0.215946 17.4347 0.0862278 18.5365C0.489596 20.0863 1.56535 20.6898 2.93256 20.759C2.93256 20.759 5.47411 21.0305 9.62589 19.8852C13.7777 18.7399 15.8469 17.1966 15.8469 17.1966C16.9972 16.4328 17.6249 15.3137 17.2324 13.8067C16.942 12.6914 16.075 12.2732 15.2431 11.872C14.3617 11.4469 13.5198 11.0409 13.4449 9.84489C12.9055 6.02004 9.33996 3.44205 6.35907 3.80801Z" fill="#78849E" />
+        </svg>
+        <img src={profile1} alt="" className="h-[56px] w-[56px] rounded-full" />
 
-                    <li>Java</li>
-                    <li>React</li>
-                    <li>Mobile App development</li>
-
-                    <li>python </li>
-                    <li>Word press</li>
-                    <li>Virtual Reality</li>
-
-                    <li>UI/UX Design </li>
-                    <li>Android Studio</li>
-                    <li>Artificial Intelligence</li>
-
-                    <li>Flutter </li>
-                    <li>Ethical hacking</li>
-                    <li> Animation</li>
-                    <li>Forex </li>
-                    <li>Blockchain & Cryptocurrency</li>
-                    <li> Data Analysis</li>
-                  </ul>
-                </div>
-              )}
-            </li>
-            <li
-              className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative"
-              onMouseOver={() => setAbout(true)}
-              onMouseLeave={() => setAbout(false)}
-            >
-              About us <BiChevronDown />
-              {about && (
-                <div
-                  className="text-[14px] absolute right-[2%]  bg-[blue] z-40 text-[blue] p-[1rem] text-center top-[90%] w-[152px] rounded-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1.5, type: "spring" }}
-                >
-                  <ul className=" mb-[1rem] ">
-                    <li className="border-b-2 p-[0.5rem]">Who We Are </li>
-                    <li className="border-b-2 p-[0.5rem]">Gallery</li>
-                    <li className="border-b-2 p-[0.5rem]"> Portfolio</li>
-                    <li className="border-b-2 p-[0.5rem]"> Team</li>
-                    <li className="border-b-2 p-[0.5rem]"> Mission</li>
-                    <li className="border-b-2 p-[0.5rem]"> vision</li>
-                  </ul>
-                </div>
-              )}
-            </li>
-            <li
-              className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative"
-              onMouseOver={() => setService(true)}
-              onMouseLeave={() => setService(false)}
-            >
-              {service && (
-                <div
-                  className="text-[14px] absolute right-[2%] bg-[blue] text-[blue] px-[1rem] z-20 top-[90%] w-[200px] text-center rounded-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  <ul className=" mb-[1rem] ">
-                    <Link to="/services/1">
-                      <li className="border-b-2 p-[0.5rem]">
-                        Web Design & Development{" "}
-                      </li>
-                    </Link>
-                    <Link to="/services/2">
-                      <li className="border-b-2 p-[0.5rem]">
-                        Mobile App Development
-                      </li>
-                    </Link>
-                    <Link to="/services/3">
-                      <li className="border-b-2 p-[0.5rem]">
-                        {" "}
-                        Digital Marketing
-                      </li>
-                    </Link>
-                    <Link to="/services/4">
-                      <li className="border-b-2 p-[0.5rem]"> Branding</li>
-                    </Link>
-                    <Link to="/services/5">
-                      <li className="border-b-2 p-[0.5rem]">
-                        {" "}
-                        Company Registration
-                      </li>
-                    </Link>
-                    <Link to="/services/6">
-                      <li className="border-b-2 p-[0.5rem]">
-                        {" "}
-                        Cryptocurrency Exchange{" "}
-                      </li>
-                    </Link>
-                    <Link to="/services/7">
-                      <li className="border-b-2 p-[0.5rem]"> Web3 </li>
-                    </Link>
-                  </ul>
-                </div>
-              )}
-              Services <BiChevronDown />
-            </li>
-            <Link to="/contact">
-              <li className="flex items-center text-[blue] text-[20px] p-[0.5rem] relative">
-                Contact us
-              </li>
-            </Link>
-          </ul>
-        )}
-
-        <p class="font-medium text-3xl leading-10 text-orange-500 font-poppins">
-          <Link to="/login">login</Link>
-        </p>
       </aside>
+      {mobile? <ClearIcon onClick={change} className='text-3xl cursor-pointer md:hidden block'/> :<BiMenuAltRight onClick={change} className='text-3xl cursor-pointer md:hidden block'/> }
+    
+    
     </div>
   );
 };
