@@ -10,7 +10,7 @@ const Accounts = () => {
   return (
     <div>
       <Layout>
-        <div className="lg:block hidden mx-auto bg-white my-[4rem] w-[90%] m-auto rounded-[25px] h-[100px] relative" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}>
+        <div className="lg:block hidden mx-auto bg-white my-[4rem] w-[90%] m-auto rounded-[25px] min-h-[100px] relative" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}>
           <span className="block p-[0.5rem] bg-white rounded-[31px] absolute bottom-[20%] left-[2%]" style={{ boxShadow: '0px 4px 30px 0px rgba(0, 0, 0, 0.10)' }}><img src={profile_g} alt="" className="h-[112px] w-[112px] rounded-[31px] " /></span>
           <div className="flex gap-8 items-center h-full pl-[11rem]">
             <aside >
